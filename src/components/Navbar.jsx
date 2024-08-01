@@ -4,11 +4,12 @@ import { FiUser, FiSun } from "react-icons/fi";
 import { LuFileCode, LuAtom, LuPhone } from "react-icons/lu";
 
 const Navbar = () => {
-    const [activeTabs,setActiveTabs] = useState(1)
+    const [activeTabs,setActiveTabs] = useState(1);
 
     const handleTabClick = (tabId) => {
         setActiveTabs(tabId);
     };
+    
 
     const tabs = [
         { id: 1, title: "Home", icon: <IoHomeOutline/> },
@@ -18,28 +19,32 @@ const Navbar = () => {
         { id: 5, title: "Contact", icon:<LuPhone/> },
       ];
   return (
-    <div className=''>
-      <div className="flex justify-around min-w-full px-40 mt-16 items-center z-auto">
-        <div className="w-96 text-5xl text-start">RIZKI <span className='text-secondary'>.</span></div>
-        <div className="w-full">
-            <div className="flex justify-around items-center bg-white text-primary p-1 rounded-full border-secondary border-solid border-4">
+    <div className='fixed min-w-full bottom-7 md:top-10 md:flex h-fit md:justify-center md:mx-auto'>
+      <div className="min-w-fit md:flex md:items-center lg:min-w-full lg:flex lg:justify-center">
+        <div className="hidden md:flex md:text-xl md:w-24 md:items-center md:justify-center lg:w-32 lg:text-3xl hover:text-secondary cursor-pointer">RIZKI <span className='text-secondary hidden md:flex'>.</span></div>
+        <div className="flex min-w-fit h-10 justify-center px-5 md:px-0">
+            <div className=" md:justify-center flex bg-white min-w-fit lg:w-full  h-full justify-around items-center rounded-full border-secondary border-2">
             {tabs.map((tab) => (
                 <div key={tab.id}
                 onClick={()=> handleTabClick(tab.id)}
                 className={`${
-                    activeTabs === tab.id 
-                    ? "bg-primary text-secondary rounded-full py-1 px-5"
-                    : "text-primary"
-                } px-4 text-2xl font-semibold focus:outline-none `}>
-                    <div className="flex gap-3">
-                        <div className="text-3xl">{tab.icon}</div>
-                        <div className="text-2xl">{tab.title}</div>
+                    activeTabs === tab.id
+                    ? "bg-primary text-secondary rounded-full flex flex-col items-center justify-center"
+                    : "text-primary flex flex-col items-center justify-center"
+                } font-semibold focus:outline-none mx-3 w-8 h-8 md:w-24 lg:w-32 items-center hover:text-secondary cursor-pointer`}>
+                    <div className="flex gap-1 w-full justify-center md:items-center">
+                        <div className="text-xl md:text-lg lg:text-2xl">{tab.icon}</div>
+                        <div className="hidden md:flex md:text-sm lg:text-xl">{tab.title}</div>
                     </div>
                 </div>
             ))}
+              <div className="md:hidden">
+                <hr className='border border-primary h-full py-3'/>
+              </div>
+              <div className="flex flex-col pl-3 justify-center md:hidden "><FiSun className='flex items-center mr-3 text-xl text-yellow-300'/></div>
             </div>
         </div>
-        <div className="w-96 flex justify-end"><FiSun className='text-3xl text-yellow-300'/></div>
+        <div className="hidden md:flex md:w-24 md:justify-center lg:w-32"><FiSun className='text-3xl md:text-xl lg:text-3xl text-yellow-300'/></div>
       </div>
     </div>
   )

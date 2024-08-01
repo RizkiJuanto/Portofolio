@@ -3,36 +3,80 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import HomeProfile from '../assets/img/Rizki_Juanto.jpg'
 import { BsDownload } from "react-icons/bs";
+import { GoDotFill } from "react-icons/go";
+import { FaFileDownload } from "react-icons/fa";
+import { BsPersonWorkspace } from "react-icons/bs";
+import { FaHandshake } from "react-icons/fa";
+import { TypeAnimation } from 'react-type-animation';
+import { motion } from 'framer-motion';
+
 
 const Home = () => {
   return (
-    <div className='flex flex-col min-h-screen'>
+    
+    <div className='flex flex-col min-h-screen '>
       <Navbar/>
-      <div className="mx-60 mt-20 h-fit mb-10">
-        <div className="text-center text-5xl mb-16">Home</div>
-        <hr className='border-secondary border-2'/>
-        <div className="flex justify-around items-start gap-20 mt-10 mb-16">
-          <div className="min-w-max">
-            <img className='h-80 w-80 rounded-full' src={HomeProfile} alt="" />
+      <div className="flex flex-grow flex-col mx-5 py-3 md:mt-24 md:mx-20">
+        <div className="flex justify-center text-2xl mb-3 text-secondary lg:text-4xl">Home</div>
+        <hr className='mb-5 border border-secondary '/>
+        <div className="flex flex-col justify-center items-start md:flex-row md:justify-around lg:w-full lg:items-start ">
+          <div className="flex w-full justify-center md:items-start md:w-96 md:my-5 lg:w-96 lg:flex lg:justify-start">
+            <motion.div
+              className="md:absolute lg:absolute shadow-lg shadow-secondary h-32 w-32 md:h-48 md:w-48 lg:w-72 lg:h-72 rounded-full border-4 border-transparent"
+              animate={{ rotate: -360 }}
+              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+            ></motion.div>
+            <img className='absolute w-32 h-32 rounded-full md:w-48 md:h-48 lg:w-72 lg:h-72' src={HomeProfile} alt="" />
+          
           </div>
-          <div className="w-full">
-            <p className='text-3xl'>
-            Hello I'm,
-            <br />
-            <p className='text-secondary text-6xl'>Rizki Juanto</p>
-            <br />
-            <p className='text-lg'>I am a Web Developer. I have experience in developing web applications using modern technologies such as React, Node.js, and various related libraries and frameworks.</p>
-            </p>
-            <div className="flex mt-14 justify-around">
-              <button className="flex gap-3 text-lg"><BsDownload className='text-2xl'/> Download My CV</button>
-              <div className="text-lg">Ready To Work</div>
-              <div className="bg-primary px-3 rounded-full border-2 border-secondary ">
-                <div className="text-lg text-secondary">Hire Me</div>
+          <div className="flex flex-col justify-center  md:justify-start md:ml-4 md:w-full lg:ml-20">
+            <div className='flex flex-col text-center my-5 md:text-start md:text-xl md:w-full'>
+              Hello My Name is,
+              <p className='text-2xl text-secondary mb-5 md:text-4xl'>Rizki Juanto</p>
+              <div className="flex flex-col mt-5">
+                <p className='md:text-lg'>I'm</p>
+                <div className="text-2xl text-secondary mb-5 md:text-3xl">
+                  <TypeAnimation
+                    sequence={[
+                      "Web Developer",
+                      1000,
+                      "Full Stack Developer",
+                      1000,
+                      "Frontend Developer",
+                      1000,
+                      "Backend Developer",
+                      1000,
+                      
+                    ]}
+                    wrapper="span"
+                    speed={50}
+                    style={{ display: 'inline-block' }}
+                    repeat={Infinity}
+                  />
+                </div>
+              </div>
+              <p className='text-justify text-xs md:text-xl  '>I am a Web Developer. I have experience in developing web applications using modern technologies such as React, Node.js, and various related libraries and frameworks.</p>
+            </div>
+            <div className="flex justify-around mb-5 md:hidden lg:hidden">
+              <button className="flex items-center gap-2 text-xs"><BsDownload className='text-lg text-secondary'/> Download My CV</button>
+              <div className="flex items-center  text-xs"><GoDotFill className='text-lg text-secondary'/>Ready To Work</div>
+              <div className="">
+                <div className="text-sm border bg-primary border-secondary rounded-full text-secondary px-2">Hire Me</div>
               </div>
             </div>
           </div>
         </div>
-        <hr className='border-secondary border-2'/>
+        <div className="hidden md:flex  lg:flex md:justify-around md:mt-16">
+          <div className="md:bg-primary md:border-3 md:border-4 md:border-secondary md:rounded-xl hover:bg-white cursor-pointer">
+            <div className="md:flex md:flex-col md:items-center lg:text-lg md:text-sm lg:w-44 md:w-36 md:my-7 lg:my-7 hover:text-primary"><FaFileDownload className='lg:text-7xl md:text-5xl text-secondary md:mb-3'/> Download My CV</div>
+          </div>
+          <div className="md:bg-primary md:border-3 md:border-4 md:border-secondary md:rounded-xl hover:bg-white cursor-pointer">
+            <div className="md:flex md:flex-col md:items-center lg:text-lg md:text-sm lg:w-44 md:w-36 md:my-7 lg:my-7 hover:text-primary"><BsPersonWorkspace className='lg:text-7xl md:text-5xl text-secondary md:mb-3'/> Ready To Work</div>
+          </div>
+          <div className="md:bg-primary md:border-3 md:border-4 md:border-secondary md:rounded-xl hover:bg-white cursor-pointer">
+            <div className="md:flex md:flex-col md:items-center lg:text-lg md:text-sm lg:w-44 md:w-36 md:my-7 lg:my-7 hover:text-primary"><FaHandshake className='lg:text-7xl md:text-5xl text-secondary md:mb-3'/> Hire Me</div>
+          </div>
+        </div>
       </div>
       <Footer/>
     </div>
