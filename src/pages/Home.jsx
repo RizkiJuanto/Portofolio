@@ -19,7 +19,7 @@ const Home = () => {
       <div className="flex flex-grow flex-col mx-5 py-3 md:mt-24 md:mx-20">
         <div className="flex justify-center text-2xl mb-3 text-secondary lg:text-4xl">Home</div>
         <hr className='mb-5 border border-secondary '/>
-        <div className="flex flex-col justify-center items-start md:flex-row md:justify-around lg:w-full lg:items-start ">
+        <div className="flex flex-col justify-center items-start md:flex-row md:justify-around lg:w-full lg:items-start mt-5">
           <div className="flex w-full justify-center md:items-start md:w-96 md:my-5 lg:w-96 lg:flex lg:justify-start">
             <motion.div
               className="md:absolute lg:absolute shadow-lg shadow-secondary h-32 w-32 md:h-48 md:w-48 lg:w-72 lg:h-72 rounded-full border-4 border-transparent"
@@ -57,24 +57,17 @@ const Home = () => {
               </div>
               <p className='text-justify text-xs md:text-xl  '>I am a Web Developer. I have experience in developing web applications using modern technologies such as React, Node.js, and various related libraries and frameworks.</p>
             </div>
-            <div className="flex justify-around mb-5 md:hidden lg:hidden">
-              <button className="flex items-center gap-2 text-xs"><BsDownload className='text-lg text-secondary'/> Download My CV</button>
-              <div className="flex items-center  text-xs"><GoDotFill className='text-lg text-secondary'/>Ready To Work</div>
-              <div className="">
-                <div className="text-sm border bg-primary border-secondary rounded-full text-secondary px-2">Hire Me</div>
-              </div>
-            </div>
           </div>
         </div>
-        <div className="hidden md:flex  lg:flex md:justify-around md:mt-16">
-          <div className="md:bg-primary md:border-3 md:border-4 md:border-secondary md:rounded-xl hover:bg-white cursor-pointer">
-            <div className="md:flex md:flex-col md:items-center lg:text-lg md:text-sm lg:w-44 md:w-36 md:my-7 lg:my-7 hover:text-primary"><FaFileDownload className='lg:text-7xl md:text-5xl text-secondary md:mb-3'/> Download My CV</div>
+        <div className="flex justify-around items-center md:flex md:flex-row lg:flex lg:flex-row md:justify-around md:mt-16 ">
+          <div className="md:bg-primary md:border-3 md:border-4 border-2 border-secondary rounded-xl mb-3 hover:bg-white cursor-pointer">
+            <div className="flex flex-col items-center text-xs rounded-xl w-28 my-3 md:flex md:flex-col md:items-center lg:text-lg md:text-sm lg:w-44 md:w-36 md:my-7 lg:my-7 hover:text-primary"><FaFileDownload className='text-4xl mb-3 lg:text-7xl md:text-5xl text-secondary md:mb-3'/> Download My CV</div>
           </div>
-          <div className="md:bg-primary md:border-3 md:border-4 md:border-secondary md:rounded-xl hover:bg-white cursor-pointer">
-            <div className="md:flex md:flex-col md:items-center lg:text-lg md:text-sm lg:w-44 md:w-36 md:my-7 lg:my-7 hover:text-primary"><BsPersonWorkspace className='lg:text-7xl md:text-5xl text-secondary md:mb-3'/> Ready To Work</div>
+          <div className="md:bg-primary md:border-3 md:border-4 border-2 border-secondary rounded-xl mb-3 hover:bg-white cursor-pointer">
+            <div className="flex flex-col items-center text-xs rounded-xl w-28 my-3 md:flex md:flex-col md:items-center lg:text-lg md:text-sm lg:w-44 md:w-36 md:my-7 lg:my-7 hover:text-primary"><BsPersonWorkspace className='text-4xl mb-3 lg:text-7xl md:text-5xl text-secondary md:mb-3'/> Ready To Work</div>
           </div>
-          <div className="md:bg-primary md:border-3 md:border-4 md:border-secondary md:rounded-xl hover:bg-white cursor-pointer">
-            <div className="md:flex md:flex-col md:items-center lg:text-lg md:text-sm lg:w-44 md:w-36 md:my-7 lg:my-7 hover:text-primary"><FaHandshake className='lg:text-7xl md:text-5xl text-secondary md:mb-3'/> Hire Me</div>
+          <div className="md:bg-primary md:border-3 md:border-4 border-2 border-secondary rounded-xl mb-3 hover:bg-white cursor-pointer">
+            <div className="flex flex-col items-center text-xs rounded-xl w-28 my-3 md:flex md:flex-col md:items-center lg:text-lg md:text-sm lg:w-44 md:w-36 md:my-7 lg:my-7 hover:text-primary"><FaHandshake className='text-4xl mb-3 lg:text-7xl md:text-5xl text-secondary md:mb-3'/> Hire Me</div>
           </div>
         </div>
       </div>
