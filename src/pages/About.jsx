@@ -2,16 +2,16 @@ import React from 'react'
 import Slider from "react-slick";
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import Tavherine from '../assets/img/Logo_Tavherine.png'
-import Tcp from '../assets/img/Logo_Tcp.jpeg'
-import Gli from '../assets/img/Logo_GLI.png'
-import Binus from '../assets/img/Logo_Binus.png'
-import Harisenin from '../assets/img/harisenin.png'
-import SertifGli from '../assets/img/Gli_Intern.jpg'
-import SertifHsBootcamp from '../assets/img/Hs_Bootcamp.jpg'
-import SertifDaa from '../assets/img/Sertif_Daa.jpg'
-import SertifSg from '../assets/img/Sertif_SG.jpg'
-import SertifToefel from '../assets/img/Sertif_Toefel.jpg'
+import Tavherine from '../assets/img/Logo/Logo_Tavherine.png'
+import Tcp from '../assets/img/Logo/Logo_Tcp.jpeg'
+import Gli from '../assets/img/Logo/Logo_GLI.png'
+import Binus from '../assets/img/Logo/Logo_Binus.png'
+import Harisenin from '../assets/img/Logo/harisenin.png'
+import SertifGli from '../assets/img/Sertificate/Gli_Intern.jpg'
+import SertifHsBootcamp from '../assets/img/Sertificate/Hs_Bootcamp.jpg'
+import SertifDaa from '../assets/img/Sertificate/Sertif_Daa.jpg'
+import SertifSg from '../assets/img/Sertificate/Sertif_SG.jpg'
+import SertifToefel from '../assets/img/Sertificate/Sertif_Toefel.jpg'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 // import { SamplePrevArrow, SampleNextArrow } from '../componentsCustomArrows';
@@ -32,7 +32,7 @@ const About = () => {
 
   return (
     <div>
-      <div className="min-h-screen flex flex-col min-fit">
+      <div className="min-h-screen flex flex-col">
         <Navbar/>
         <div className="flex flex-grow flex-col mx-5 py-3 md:mt-24 md:mx-20">
             <div className="flex justify-center text-2xl mb-3 text-secondary lg:text-4xl">About</div>

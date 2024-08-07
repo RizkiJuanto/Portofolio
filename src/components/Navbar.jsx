@@ -12,7 +12,7 @@ const Navbar = () => {
     
 
     const tabs = [
-        { id: 1, title: "Home", icon: <IoHomeOutline/> },
+        { id: 1, title: "Home", icon: <IoHomeOutline/>},
         { id: 2, title: "About", icon:<FiUser/> },
         { id: 3, title: "Project", icon:<LuFileCode/> },
         { id: 4, title: "Skills", icon:<LuAtom/> },

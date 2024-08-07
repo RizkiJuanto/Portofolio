@@ -59,14 +59,14 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-around items-center md:flex md:flex-row lg:flex lg:flex-row md:justify-around md:mt-16 ">
-          <div className="md:bg-primary md:border-3 md:border-4 border-2 border-secondary rounded-xl mb-3 hover:bg-white cursor-pointer">
+        <div className="flex justify-around items-center md:flex md:flex-row lg:flex lg:flex-row md:justify-around md:mt-16 mt-6">
+          <div className="md:bg-primary md:border-3 md:border-4 border-2 border-secondary rounded-xl mb-3 hover:bg-white hover:shadow-xl hover:shadow-secondary transition-all hover:-translate-y-2 cursor-pointer">
             <div className="flex flex-col items-center text-xs rounded-xl w-28 my-3 md:flex md:flex-col md:items-center lg:text-lg md:text-sm lg:w-44 md:w-36 md:my-7 lg:my-7 hover:text-primary"><FaFileDownload className='text-4xl mb-3 lg:text-7xl md:text-5xl text-secondary md:mb-3'/> Download My CV</div>
           </div>
-          <div className="md:bg-primary md:border-3 md:border-4 border-2 border-secondary rounded-xl mb-3 hover:bg-white cursor-pointer">
+          <div className="md:bg-primary md:border-3 md:border-4 border-2 border-secondary rounded-xl mb-3 hover:bg-white hover:shadow-xl hover:shadow-secondary transition-all hover:-translate-y-2 cursor-pointer">
             <div className="flex flex-col items-center text-xs rounded-xl w-28 my-3 md:flex md:flex-col md:items-center lg:text-lg md:text-sm lg:w-44 md:w-36 md:my-7 lg:my-7 hover:text-primary"><BsPersonWorkspace className='text-4xl mb-3 lg:text-7xl md:text-5xl text-secondary md:mb-3'/> Ready To Work</div>
           </div>
-          <div className="md:bg-primary md:border-3 md:border-4 border-2 border-secondary rounded-xl mb-3 hover:bg-white cursor-pointer">
+          <div className="md:bg-primary md:border-3 md:border-4 border-2 border-secondary rounded-xl mb-3 hover:bg-white hover:shadow-xl hover:shadow-secondary transition-all hover:-translate-y-2 cursor-pointer">
             <div className="flex flex-col items-center text-xs rounded-xl w-28 my-3 md:flex md:flex-col md:items-center lg:text-lg md:text-sm lg:w-44 md:w-36 md:my-7 lg:my-7 hover:text-primary"><FaHandshake className='text-4xl mb-3 lg:text-7xl md:text-5xl text-secondary md:mb-3'/> Hire Me</div>
           </div>
         </div>
