@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Skill from "./pages/Skill";
+import Contact from "./pages/Contact";
 
 
 export const App = () => {
@@ -13,7 +14,8 @@ export const App = () => {
       <Routes>
         {/* <Route path="/" element={<Home />} /> */}
         {/* <Route path="/" element={<About />} /> */}
-        <Route path="/" element={<Skill />} />
+        {/* <Route path="/" element={<Skill />} /> */}
+        <Route path="/" element={<Contact />} />
         {/* <Route path="/" element={<Navbar/>} /> */}
         {/* <Route path="/" element={<Footer/>} /> */}
       </Routes>
