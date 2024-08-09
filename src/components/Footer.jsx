@@ -16,7 +16,7 @@ const Footer = () => {
             <div className="text-sm hover:text-secondary cursor-pointer">Documentation</div>
         </div>
         <div className="flex mb-6 gap-2">
-            <div className="text-2xl md:text-3xl hover:text-secondary cursor-pointer"><IoLogoLinkedin/></div>
+            <div className="text-2xl md:text-3xl fhover:text-secondary cursor-pointer"><IoLogoLinkedin/></div>
             <div className="text-2xl md:text-3xl hover:text-secondary cursor-pointer"><IoLogoInstagram/></div>
             <div className="text-2xl md:text-3xl hover:text-secondary cursor-pointer"><IoLogoGithub/></div>
             <div className="text-2xl md:text-3xl hover:text-secondary cursor-pointer"><IoLogoFacebook/></div>

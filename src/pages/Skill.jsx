@@ -21,16 +21,6 @@ const Skill = () => {
         { id: 8, icon: <SiReact className='text-pink-400' />, title: "React Icon" },
         { id: 9, icon: <SiTailwindcss className='text-teal-500' />, title: "Tailwind CSS" },
         { id: 10, icon: <SiVite className='text-purple-500' />, title: "Vite" },
-        { id: 11, icon: <SiAxios className='text-blue-600' />, title: "Axios" },
-        { id: 12, icon: <SiCss3 className='text-blue-700' />, title: "CSS" },
-        { id: 13, icon: <SiFramer className='text-pink-500' />, title: "Framer Motion" },
-        { id: 14, icon: <SiHtml5 className='text-orange-600' />, title: "HTML" },
-        { id: 15, icon: <SiJavascript className='text-yellow-500' />, title: "JavaScript" },
-        { id: 16, icon: <RiNextjsFill className='text-black' />, title: "Next.js" },
-        { id: 17, icon: <SiReact className='text-blue-400' />, title: "ReactJS" },
-        { id: 18, icon: <SiReact className='text-pink-400' />, title: "React Icon" },
-        { id: 19, icon: <SiTailwindcss className='text-teal-500' />, title: "Tailwind CSS" },
-        { id: 20, icon: <SiVite className='text-purple-500' />, title: "Vite" },
     ]
 
     const iconBe = [
@@ -44,7 +34,7 @@ const Skill = () => {
     ]
 
     const iconTools = [
-        { id: 1, icon: <SiDbeaver className='text-green-600' />, title: "DBeaver" },
+        { id: 1, icon: <SiDbeaver className='text-orange-900' />, title: "DBeaver" },
         { id: 2, icon: <SiGithub className='text-black' />, title: "GitHub" },
         { id: 3, icon: <SiPostman className='text-orange-500' />, title: "Postman" },
         { id: 4, icon: <VscVscode className='text-blue-600' />, title: "VS Code" },
@@ -59,35 +49,67 @@ const Skill = () => {
         <hr className='mb-5 border border-secondary'/>
         <div className="w-full">
             <div className="w-full">
-                <div className="">Frontend Stacks</div>
-                <div className="flex overflow-hidden space-x-16">
-                <div className="flex space-x-16 animate-loop-scroll ">
-                    {iconFe.map(icon => (
-                        <div key={icon.id} className="flex whitespace-nowrap items-center gap-2 w-full h-10 rounded bg-gray-100 hover:bg-gray-200 cursor-pointer px-2">
-                            <div className="text-lg">{icon.icon}</div>
-                            <div className=" text-black">{icon.title}</div>
-                            
-                        </div>
-                    ))}
-                    {iconFe.map(icon => (
-                        <div key={icon.id} className="flex items-center gap-2 w-full h-10 rounded bg-gray-100 hover:bg-gray-200 cursor-pointer px-2">
-                            <div className="text-lg">{icon.icon}</div>
-                            <div className="whitespace-nowrap text-black">{icon.title}</div>
-                            
-                        </div>
-                    ))}
-                    <div className="">
+                <div className="my-5 font-semibold md:text-xl md:font-medium border-b-2 border-secondary w-fit">Frontend Stacks</div>
+                <div className="flex space-x-16 overflow-hidden">
+                    <div className="flex space-x-16 animate-loop-scroll ">
+                        {iconFe.map(icon => (
+                            <div key={icon.id} className="flex whitespace-nowrap md:flex-col md:h-20 md:w-48 lg:h-40   items-center gap-2 w-full h-10 rounded bg-gray-100 hover:bg-gray-200 cursor-pointer px-2">
+                                <div className="text-lg md:text-4xl md:mt-2 lg:text-7xl lg:mb-4 lg:my-5">{icon.icon}</div>
+                                <div className=" text-black md:text-lg lg:text-xl">{icon.title}</div>  
+                            </div>
+                        ))}    
+                    </div>
+                    <div aria-hidden="true" className="flex space-x-16 animate-loop-scroll ">
+                        {iconFe.map(icon => (
+                            <div key={icon.id} className="flex whitespace-nowrap md:flex-col md:h-20 md:w-48 lg:h-40   items-center gap-2 w-full h-10 rounded bg-gray-100 hover:bg-gray-200 cursor-pointer px-2">
+                                <div className="text-lg md:text-4xl md:mt-2 lg:text-7xl lg:mb-4 lg:my-5">{icon.icon}</div>
+                                <div className=" text-black md:text-lg lg:text-xl">{icon.title}</div>  
+                            </div>
+                        ))}    
                     </div>
                 </div>
+            </div>
+            <div className="">
+                <div className="my-5 font-semibold md:text-xl md:font-medium border-b-2 border-secondary w-fit">Backend Stacks</div>
+                <div className="flex space-x-16 overflow-hidden">
+                    <div className="flex space-x-16 animate-loop-scroll">
+                        {iconBe.map(icon => (
+                            <div key={icon.id} className="flex whitespace-nowrap md:flex-col md:h-20 md:w-48 lg:h-40   items-center gap-2 w-full h-10 rounded bg-gray-100 hover:bg-gray-200 cursor-pointer px-2">
+                                <div className="text-lg md:text-4xl md:mt-2 lg:text-7xl lg:mb-4 lg:my-5">{icon.icon}</div>
+                                <div className=" text-black md:text-lg lg:text-xl">{icon.title}</div>  
+                            </div>
+                        ))}    
+                    </div>
+                    <div aria-hidden="true" className="flex space-x-16 animate-loop-scroll ">
+                        {iconBe.map(icon => (
+                            <div key={icon.id} className="flex whitespace-nowrap md:flex-col md:h-20 md:w-48 lg:h-40  items-center gap-2 w-full h-10 rounded bg-gray-100 hover:bg-gray-200 cursor-pointer px-2">
+                                <div className="text-lg md:text-4xl md:mt-2 lg:text-7xl lg:mb-4 lg:my-5">{icon.icon}</div>
+                                <div className=" text-black md:text-lg lg:text-xl">{icon.title}</div>  
+                            </div>
+                        ))}    
+                    </div>
                 </div>
             </div>
             <div className="">
-                <div className="">Backend Stacks</div>
-                <div className=""></div>
-            </div>
-            <div className="">
-                <div className="">Tools</div>
-                <div className=""></div>
+                <div className="my-5 font-semibold md:text-xl md:font-medium border-b-2 border-secondary w-fit">Tools</div>
+                <div className="flex space-x-16 overflow-hidden">
+                    <div className="flex space-x-16 animate-loop-scroll ">
+                        {iconTools.map(icon => (
+                            <div key={icon.id} className="flex whitespace-nowrap md:flex-col md:h-20 md:w-48 lg:h-40  items-center gap-2 w-full h-10 rounded bg-gray-100 hover:bg-gray-200 cursor-pointer px-2">
+                                <div className="text-lg md:text-4xl md:mt-2 lg:text-7xl lg:mb-4 lg:my-5">{icon.icon}</div>
+                                <div className=" text-black md:text-lg lg:text-xl">{icon.title}</div>  
+                            </div>
+                        ))}    
+                    </div>
+                    <div aria-hidden="true" className="flex space-x-16 animate-loop-scroll ">
+                        {iconTools.map(icon => (
+                            <div key={icon.id} className="flex whitespace-nowrap md:flex-col md:h-20 md:w-48 lg:h-40  items-center gap-2 w-full h-10 rounded bg-gray-100 hover:bg-gray-200 cursor-pointer px-2">
+                                <div className="text-lg md:text-4xl md:mt-2 lg:text-7xl lg:mb-4 lg:my-5">{icon.icon}</div>
+                                <div className=" text-black md:text-lg lg:text-xl">{icon.title}</div>  
+                            </div>
+                        ))}    
+                    </div>
+                </div>
             </div>
             
         </div>
