@@ -20,16 +20,16 @@ const Home = () => {
         <div className="flex justify-center text-2xl mb-3 text-secondary lg:text-4xl">Home</div>
         <hr className='mb-5 border border-secondary '/>
         <div className="flex flex-col justify-center items-start md:flex-row md:justify-around lg:w-full lg:items-start mt-5">
-          <div className="flex w-full justify-center md:items-start md:w-96 md:my-5 lg:w-96 lg:flex lg:justify-start">
+          <div className="flex w-full justify-center md:items-start md:w-96 md:my-5 lg:w-full lg:h-96 lg:flex lg:justify-center">
             <motion.div
-              className="md:absolute lg:absolute shadow-lg shadow-secondary h-32 w-32 md:h-48 md:w-48 lg:w-72 lg:h-72 rounded-full border-4 border-transparent"
+              className="md:absolute lg:flex lg:items-center shadow-lg shadow-secondary h-32 w-32 md:h-48 md:w-48 lg:w-96 lg:h-96 rounded-full border-4 border-transparent"
               animate={{ rotate: -360 }}
               transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
             ></motion.div>
-            <img className='absolute w-32 h-32 rounded-full md:w-48 md:h-48 lg:w-72 lg:h-72' src={HomeProfile} alt="" />
+            <img className='absolute lg:flex lg:items-center w-32 h-32 rounded-full md:w-48 md:h-48 lg:w-96 lg:h-96' src={HomeProfile} alt="" />
           
           </div>
-          <div className="flex flex-col justify-center  md:justify-start md:ml-4 md:w-full lg:ml-20">
+          <div className="flex flex-col justify-center  md:justify-start md:ml-4 md:w-full lg:mr-20 lg:pr-10">
             <div className='flex flex-col text-center my-5 md:text-start md:text-xl md:w-full'>
               Hello My Name is,
               <p className='text-2xl text-secondary mb-5 md:text-4xl'>Rizki Juanto</p>

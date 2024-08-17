@@ -72,7 +72,7 @@ const Skill = () => {
             <div className="">
                 <div className="my-5 font-semibold md:text-xl md:font-medium border-b-2 border-secondary w-fit">Backend Stacks</div>
                 <div className="flex space-x-16 overflow-hidden">
-                    <div className="flex space-x-16 animate-loop-scroll">
+                    <div className="flex space-x-16 animate-loop-scroll2">
                         {iconBe.map(icon => (
                             <div key={icon.id} className="flex whitespace-nowrap md:flex-col md:h-20 md:w-48 lg:h-40   items-center gap-2 w-full h-10 rounded bg-gray-100 hover:bg-gray-200 cursor-pointer px-2">
                                 <div className="text-lg md:text-4xl md:mt-2 lg:text-7xl lg:mb-4 lg:my-5">{icon.icon}</div>
@@ -80,7 +80,7 @@ const Skill = () => {
                             </div>
                         ))}    
                     </div>
-                    <div aria-hidden="true" className="flex space-x-16 animate-loop-scroll ">
+                    <div aria-hidden="true" className="flex space-x-16 animate-loop-scroll2 ">
                         {iconBe.map(icon => (
                             <div key={icon.id} className="flex whitespace-nowrap md:flex-col md:h-20 md:w-48 lg:h-40  items-center gap-2 w-full h-10 rounded bg-gray-100 hover:bg-gray-200 cursor-pointer px-2">
                                 <div className="text-lg md:text-4xl md:mt-2 lg:text-7xl lg:mb-4 lg:my-5">{icon.icon}</div>

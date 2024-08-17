@@ -6,7 +6,7 @@ module.exports = {
       animation: {
         'spin-border': 'spin-border 2s linear infinite',
         'loop-scroll': 'loop-scroll 50s linear infinite',
-        'loop-scroll2': 'loop-scroll 50s linear infinite',
+        'loop-scroll2': 'loop-scroll2 50s linear infinite',
       },
       keyframes: {
         'spin-border': {
@@ -18,8 +18,8 @@ module.exports = {
           to: { transform: 'translateX(-100%)' },
         }, 
         'loop-scroll2': {
-          from:{ transform: 'translateX(0)'},
-          to: { transform: 'translateX(200%)' },
+          from:{ transform: 'translateX(-100%)'},
+          to: { transform: 'translateX(0)' },
         }, 
       },
       colors: {

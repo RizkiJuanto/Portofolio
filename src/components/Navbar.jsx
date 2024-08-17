@@ -1,10 +1,24 @@
 import React, { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom';
 import { IoHomeOutline } from "react-icons/io5";
 import { FiUser, FiSun } from "react-icons/fi";
 import { LuFileCode, LuAtom, LuPhone } from "react-icons/lu";
 
 const Navbar = () => {
-    const [activeTabs,setActiveTabs] = useState(1);
+  const [activeTabs, setActiveTabs] = useState(1);
+  const location = useLocation();
+
+  useEffect(() => {
+    const currentPath = location.pathname;
+    const currentTab = tabs.find(tab => tab.path === currentPath);
+    
+    // If a matching tab is found, set it as active; otherwise, default to Home
+    if (currentTab) {
+        setActiveTabs(currentTab.id);
+    } else {
+        setActiveTabs(1);  // Default to the Home tab
+    }
+  }, [location]);
 
     const handleTabClick = (tabId) => {
         setActiveTabs(tabId);
@@ -12,11 +26,11 @@ const Navbar = () => {
     
 
     const tabs = [
-        { id: 1, title: "Home", icon: <IoHomeOutline/>},
-        { id: 2, title: "About", icon:<FiUser/> },
-        { id: 3, title: "Project", icon:<LuFileCode/> },
-        { id: 4, title: "Skills", icon:<LuAtom/> },
-        { id: 5, title: "Contact", icon:<LuPhone/> },
+        { id: 1, title: "Home", icon: <IoHomeOutline/>,path:"/"},
+        { id: 2, title: "About", icon:<FiUser/>,path:"/about"},
+        { id: 3, title: "Project", icon:<LuFileCode/>,path:"/project"},
+        { id: 4, title: "Skills", icon:<LuAtom/>,path:"/skill"},
+        { id: 5, title: "Contact", icon:<LuPhone/>,path:"/contact"},
       ];
   return (
     <div className='fixed min-w-full bottom-7 md:top-0 md:py-5 md:flex h-fit md:justify-center md:mx-auto lg:mx-auto z-50 md:bg-primary '>
@@ -25,7 +39,9 @@ const Navbar = () => {
         <div className="flex min-w-fit h-10 justify-center px-5  md:mx-auto lg:mx-auto">
             <div className=" md:justify-center flex bg-white min-w-fit lg:w-full  h-full justify-around items-center rounded-full border-secondary border-2 ">
             {tabs.map((tab) => (
-                <div key={tab.id}
+              <Link 
+                key={tab.id}
+                to={tab.path}
                 onClick={()=> handleTabClick(tab.id)}
                 className={`${
                     activeTabs === tab.id
@@ -36,7 +52,7 @@ const Navbar = () => {
                         <div className="text-xl md:text-lg lg:text-2xl">{tab.icon}</div>
                         <div className="hidden md:flex md:text-sm lg:text-xl">{tab.title}</div>
                     </div>
-                </div>
+              </Link>
             ))}
               <div className="md:hidden">
                 <hr className='border border-primary h-full py-3'/>
